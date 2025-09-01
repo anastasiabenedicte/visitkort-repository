@@ -5,8 +5,29 @@ import brev from "../assets/images/brev.png";
 import laas from "../assets/images/laas.png";
 ---
 <MainLayout title="Titel">
-  <article class="bg-black min-h-screen flex items-center justify-center relative">
-    <Image src={brev} alt="" class="max-w-full max-h-full" />
-    <Image src={laas} alt="" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 max-w-full max-h-full" />
+  <article class="bg-black min-h-screen flex items-center justify-center">
+    <div class="relative">
+      <!-- Brev -->
+      <Image src={brev} alt="brev" class="max-w-full max-h-full" />
+
+      <!-- Lås centreret på brevet med hop-animation og link til astro.brev -->
+      <a href="/brev.astro" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <Image 
+          src={laas} 
+          alt="låsen" 
+          class="max-w-[50px] animate-hop"
+        />
+      </a>
+    </div>
   </article>
+
+  <style>
+    @keyframes hop {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+    .animate-hop {
+      animation: hop 0.8s infinite ease-in-out;
+    }
+  </style>
 </MainLayout>
