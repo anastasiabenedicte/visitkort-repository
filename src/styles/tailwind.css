@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin '@tailwindcss/typography';
 @plugin '@tailwindcss/forms';
@@ -19,9 +19,27 @@
   }
 }
 
-@layer components{
-
+@layer components {
 }
-@layer utilities{
-  
+@layer utilities {
+  .font-cormorant-100 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 100;
+    font-optical-sizing: auto;
+  }
+  .font-cormorant-500 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 500;
+    font-optical-sizing: auto;
+  }
+  .font-cormorant-600 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 600;
+    font-optical-sizing: auto;
+  }
+  .font-cormorant-700 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 700;
+    font-optical-sizing: auto;
+  }
 }

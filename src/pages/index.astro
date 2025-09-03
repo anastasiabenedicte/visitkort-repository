@@ -4,19 +4,61 @@ import { Image } from 'astro:assets';
 import brev from "../assets/images/brev.png";
 import laas from "../assets/images/laas.png";
 ---
+
 <MainLayout title="Titel">
-  <article class="bg-black min-h-screen flex items-center justify-center">
+  <article class="bg-black min-h-screen flex flex-col items-center justify-center">
     <div class="relative">
       <!-- Brev -->
-      <Image src={brev} alt="brev" class="max-w-full max-h-full" />
+      <Image 
+        src={brev} 
+        alt="brev" 
+        class="max-w-[500px] md:max-w-[2000px] max-h-full"
+      />
 
       <!-- Lås centreret på brevet med hop-animation og link til astro.brev -->
       <a href="/brev" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group">
         <Image 
           src={laas} 
           alt="låsen" 
-          class="max-w-[50px] animate-hop group-hover:animate-none transition-transform duration-200 group-hover:scale-110"
+          class="max-w-[100px] md:max-w-[200px] animate-hop transition-transform duration-200 group-hover:animate-none"
         />
+      </a>
+    </div>
+
+    <!-- Navn og titel i grid, nu uden for brevet og lås -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+      <h2 class="font-cormorant-500 italic text-2xl text-white">
+        Anastasia Benedicte
+      </h2>
+      <h2 class="font-cormorant-500 italic text-2xl text-white">
+        Frontend Developer / Storyteller
+      </h2>
+    </div>
+
+
+    <!-- Kontakt-links i grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 text-center">
+      <a
+        href="mailto:anni0010@stud.ek.dk"
+        class="font-cormorant-500 italic text-xl text-white hover:text-gray-400 transition"
+      >
+        Contact
+      </a>
+      <a
+        href="https://www.instagram.com/anastasiabenedicte/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="font-cormorant-500 italic text-xl text-white hover:text-gray-400 transition"
+      >
+        Instagram
+      </a>
+      <a
+        href="https://www.linkedin.com/in/anastasianielsen/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="font-cormorant-500 italic text-xl text-white hover:text-gray-400 transition"
+      >
+        LinkedIn
       </a>
     </div>
   </article>
@@ -29,9 +71,9 @@ import laas from "../assets/images/laas.png";
     .animate-hop {
       animation: hop 0.8s infinite ease-in-out;
     }
-    /* Stop animation ved hover */
     .group:hover .animate-hop {
       animation: none;
+      /* Fjern scale, så størrelsen ikke ændres ved hover */
     }
   </style>
 </MainLayout>
