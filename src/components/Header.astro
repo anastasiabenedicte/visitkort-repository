@@ -1,5 +1,18 @@
 ---
+import { Image } from 'astro:assets';
+import laas from '../assets/images/laas.png';
+import papirBg from '../assets/images/papir.png';
 ---
-<div>
-Header - tilføj navigation mm.
-</div>
+
+<header
+  class="w-full p-4 md:p-6 flex items-center bg-repeat bg-center"
+  style={`background-image: url('${papirBg.src}'); image-rendering: auto;`}
+>
+  <a href="/">
+    <Image 
+      src={laas} 
+      alt="brev" 
+      class="h-10 md:h-16 w-auto transition-transform duration-300 hover:scale-115 hover:drop-shadow-lg"
+    />
+  </a>
+</header>

@@ -11,11 +11,11 @@ import laas from "../assets/images/laas.png";
       <Image src={brev} alt="brev" class="max-w-full max-h-full" />
 
       <!-- Lås centreret på brevet med hop-animation og link til astro.brev -->
-      <a href="/brev.astro" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <a href="/brev" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group">
         <Image 
           src={laas} 
           alt="låsen" 
-          class="max-w-[50px] animate-hop"
+          class="max-w-[50px] animate-hop group-hover:animate-none transition-transform duration-200 group-hover:scale-110"
         />
       </a>
     </div>
@@ -28,6 +28,10 @@ import laas from "../assets/images/laas.png";
     }
     .animate-hop {
       animation: hop 0.8s infinite ease-in-out;
+    }
+    /* Stop animation ved hover */
+    .group:hover .animate-hop {
+      animation: none;
     }
   </style>
 </MainLayout>
