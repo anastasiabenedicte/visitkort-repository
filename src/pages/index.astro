@@ -9,11 +9,11 @@ import laas from "../assets/images/laas.png";
   <article class="bg-black min-h-screen flex flex-col items-center justify-center">
     <div class="relative">
       <!-- Brev -->
-      <Image 
-        src={brev} 
-        alt="brev" 
-        class="max-w-[500px] md:max-w-[2000px] max-h-full"
-      />
+   <Image 
+  src={brev} 
+  alt="brev" 
+  class="w-[300px] transform sm:scale-100 md:scale-125 lg:scale-150"
+/>
 
       <!-- Lås centreret på brevet med hop-animation og link til astro.brev -->
       <a href="/brev" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group">
@@ -26,21 +26,21 @@ import laas from "../assets/images/laas.png";
     </div>
 
     <!-- Navn og titel i grid, nu uden for brevet og lås -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-      <h2 class="font-cormorant-500 italic text-2xl text-white">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-40 mb-20">
+      <h2 class="font-cormorant-100 italic text-xl">
         Anastasia Benedicte
       </h2>
-      <h2 class="font-cormorant-500 italic text-2xl text-white">
-        Frontend Developer / Storyteller
+      <h2 class="font-cormorant-100 italic text-xl">
+      
       </h2>
     </div>
 
 
     <!-- Kontakt-links i grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 text-center">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-15 mb100 text-center column-gap">
       <a
         href="mailto:anni0010@stud.ek.dk"
-        class="font-cormorant-500 italic text-xl text-white hover:text-gray-400 transition"
+        class="font-cormorant-500 italic text-m text-white hover:text-gray-400 transition"
       >
         Contact
       </a>
@@ -48,7 +48,7 @@ import laas from "../assets/images/laas.png";
         href="https://www.instagram.com/anastasiabenedicte/"
         target="_blank"
         rel="noopener noreferrer"
-        class="font-cormorant-500 italic text-xl text-white hover:text-gray-400 transition"
+        class="font-cormorant-500 italic text-m text-white hover:text-gray-400 transition"
       >
         Instagram
       </a>
@@ -56,7 +56,7 @@ import laas from "../assets/images/laas.png";
         href="https://www.linkedin.com/in/anastasianielsen/"
         target="_blank"
         rel="noopener noreferrer"
-        class="font-cormorant-500 italic text-xl text-white hover:text-gray-400 transition"
+        class="font-cormorant-500 italic text-m text-white hover:text-gray-400 transition"
       >
         LinkedIn
       </a>
