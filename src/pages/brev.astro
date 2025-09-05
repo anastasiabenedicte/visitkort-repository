@@ -14,205 +14,117 @@ import living from '../assets/images/living.png';
 import kismet from '../assets/images/kismet.png';
 import foto1 from '../assets/images/foto1.png';
 import foto2 from '../assets/images/foto2.png';
-import foto3 from '../assets/images/foto3.png';
 import foto4 from '../assets/images/foto4.png';
-
 ---
 
-<MainLayout title="Titel">
-  <header><Header></Header></header>
-  <main
-    class="min-h-screen flex flex-col items-center justify-center bg-repeat bg-center p-6"
-    style={`background-image: url('${papirBg.src}');`}
-  >
-    <!-- Navn -->
-    <h1 class="text-2xl md:text-4xl font-bold tracking-wide text-center mb-8 font-[Tenor_Sans] mt30">
-      ANASTASIA <br>BENEDICTE
+<MainLayout title="Anastasia Benedicte | Design & Visuel Identitet">
+  <header class="relative z-20">
+    <Header />
+  </header>
+
+  <!-- HERO SECTION -->
+<section class="relative flex flex-col items-center justify-center text-center px-6 py-16 sm:py-24 min-h-screen bg-repeat bg-center" 
+         style={`background-image: url('${papirBg.src}'); background-position: center; background-repeat: repeat;`}>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-white/30 pointer-events-none"></div>
+
+  <div class="relative z-10 max-w-prose mx-auto font-[Tenor_Sans]">
+    <!-- Navn / Titel -->
+    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-snug">
+      ANASTASIA <br />BENEDICTE
     </h1>
 
-    <div class="relative flex flex-col items-center mt-40">
-      <!-- Portræt -->
-      <div class="relative z-20">
-        <Image
-          src={portræt}
-          alt="Portræt"
-          class="w-40 md:w-56 object-cover shadow-lg"
-        />
-      </div>
-
-      <!-- Billeder rundt om -->
-      <Image src={blomst} alt="Blomst" class="absolute -top-24 left-1/2 -translate-x-1/2 w-20 z-10" />
-      <Image src={billede} alt="Billede" class="absolute top-1/2 -translate-y-1/2 -left-28 w-20 z-10" />
-      <Image src={kamera} alt="Kamera" class="absolute top-1/2 -translate-y-1/2 right-[-7rem] w-20 z-10" />
-      <Image src={brev} alt="Brev" class="absolute -bottom-24 left-1/2 -translate-x-1/2 w-20 z-10" />
-
-      <!-- Tekster ved billeder -->
-      <p class="absolute -top-40 left-1/2 -translate-x-3/2 bg-white/80 p-2 rounded shadow text-sm min-w-[150px]">
-        Opvokset på den nordlige landside, hvori jeg i naturen finder stor ro og inspiration
-      </p>
-      <p class="absolute top-3/2 -translate-y-1/2 -right-25 bg-white/80 p-2 rounded shadow text-sm max-w-[120px]">
-        SoMe-ansvarlig på bogforlag
-      </p>
-      <p class="absolute top-3/2 -translate-x-80 right-[-10rem] bg-white/80 p-2 rounded shadow text-sm max-w-[140px]">
-        Hjerte for fotografi, bøger og musik
-      </p>
-      <p class="absolute -top-40 left-3/2 -translate-x-1/2 bg-white/80 p-2 rounded shadow text-sm min-w-[50px]">
-      23 år
-      </p>
-
-      <!-- Streger -->
-      <svg class="absolute inset-0 w-full h-full pointer-events-none z-0">
-        <!-- top -->
-        <path d="M 180 120 Q 180 60 200 20" stroke="black" stroke-width="1.2" fill="none" />
-        <!-- venstre -->
-        <path d="M 120 160 Q 60 160 20 160" stroke="black" stroke-width="1.2" fill="none" />
-        <!-- højre -->
-        <path d="M 240 160 Q 300 160 340 160" stroke="black" stroke-width="1.2" fill="none" />
-        <!-- bund -->
-        <path d="M 180 200 Q 180 260 200 300" stroke="black" stroke-width="1.2" fill="none" />
-      </svg>
-    </div>
-
-
-    <!-- Lang tekst -->
-    <p class="text-gray-800 text-center text-base mt-10 max-w-2xl leading-relaxed bg-white/80 p-6 rounded-lg shadow-lg z-10">
-      I mit arbejde er jeg optaget af organiske og tidløse former, hvor naturen ofte fungerer
-      som referencepunkt. Jeg ser samspillet mellem det æstetiske, det sanselige og det
-      funktionelle som et spændende kraftfelt – og dér, hvor design for alvor bliver stærkt:
-      når både øjet, øret og hjernen stimuleres, samtidig med at hjertet berøres.
+    <!-- Subtitle -->
+    <p class="mt-4 text-base sm:text-lg md:text-xl text-gray-800">
+      Design & Visuel formidling
     </p>
-    </main>
-   
-<div class="bg-white py-24 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto max-w-2xl lg:mx-0">
-    </div>
-          <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl ">FOTOGRAFI</h2>
-    <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-  <!-- Boks 1 -->
-  <article class="flex max-w-xl flex-col items-start justify-between">
-    <div class="flex items-center gap-x-4 text-xs">
-      <time datetime="2020-03-16" class="text-gray-500">Canon AF35ML</time>
-      <span class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600">Film 2302/3302 </span>
-    </div>
-    <div class="group relative grow">
-  
-      <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">
-        Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.
-      </p>
-    </div>
-    <div class="relative mt-8 flex items-center justify-self-end max-w-xs">
-  <Image src={foto1} alt="Foto1" class="w-auto h-110 object-contain" />
-</div>
-  </article>
 
-  <!-- Boks 2 -->
-  <article class="flex max-w-xl flex-col items-start justify-between">
-    <div class="flex items-center gap-x-4 text-xs">
-      <time datetime="2020-03-10" class="text-gray-500">Canon AF35ML</time>
-      <span class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600">Film 2302/3302 </span>
-    </div>
-    <div class="group relative grow">
-  
-      <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">
-        Optio cum necessitatibus dolor voluptatum provident commodi et. Qui aperiam fugiat nemo cumque.
-      </p>
-    </div>
-     <div class="relative mt-8 flex items-center justify-self-end max-w-xs">
-  <Image src={foto2} alt="Foto2" class="w-auto h-110 object-contain" />
-  </article>
+    <!-- Typewriter tekst -->
+    <p class="mt-8 text-gray-700 text-base sm:text-lg leading-relaxed animate-typewriter whitespace-normal sm:whitespace-nowrap border-r-2 border-gray-900">
+      I mit arbejde er jeg optaget af en organisk tankegang omkring det
+    </p>
 
-  <!-- Boks 3 -->
-  <article class="flex max-w-xl flex-col items-start justify-between">
-    <div class="flex items-center gap-x-4 text-xs">
-      <time datetime="2020-02-12" class="text-gray-500">Canon AF35ML</time>
-      <span class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600">Film 2302/3302 </span>
-    </div>
-    <div class="group relative grow">
-      <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-        MUUSMANN FORLAG
-      </h3>
-      <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">
-        Cupiditate maiores ullam eveniet adipisci in doloribus nulla minus. Voluptas iusto libero adipisci rem et corporis. Nostrud sint anim sunt aliqua. Nulla eu labore irure incididunt velit cillum quis magna dolore.
-      </p>
-    </div>
-  <div class="relative mt-8 flex items-center justify-self-end max-w-xs">
-  <Image src={foto4} alt="Foto4" class="w-auto h-110 object-contain" />
-</div>
-  </article>
-</div>
+    <!-- Tre billeder under teksten -->
+    <div class="relative mt-12 flex justify-center items-end gap-6">
+      <!-- Venstre billede -->
+      <Image 
+        src={billede} 
+        alt="Venstre billede" 
+        class="w-32 sm:w-40 md:w-48 h-auto object-cover rounded-md transform transition-transform duration-300 hover:scale-105 -translate-y-6"
+      />
 
+      <!-- Centrum billede -->
+      <Image 
+        src={brev} 
+        alt="Centrum billede" 
+        class="w-36 sm:w-48 md:w-56 h-auto object-cover rounded-md transform transition-transform duration-300 hover:scale-105 z-10"
+      />
+
+      <!-- Højre billede -->
+      <Image 
+        src={kamera} 
+        alt="Højre billede" 
+        class="w-32 sm:w-40 md:w-48 h-auto object-cover rounded-md transform transition-transform duration-300 hover:scale-105 -translate-y-6"
+      />
     </div>
   </div>
+</section>
+
+
+
+<div class="mx-auto max-w-7xl px-6 lg:px-8">
+
+  <!-- Første grå streg før portfolio -->
+  <div class="border-t border-gray-200 pt-10"></div>
+
+  <h2 class="text-4xl tracking-tight text-gray-900 text-center sm:text-5xl mb-12">PORTFOLIO</h2>
+  <!-- Første billedsektion (klikbare med hover) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 pb-16">
+  <a href="https://www.instagram.com/livingtrendoglivsstil/" target="_blank" class="flex flex-col items-center w-full max-w-sm mx-auto transform transition-transform duration-300 hover:scale-105 cursor-pointer mb-8">
+    <time datetime="2020-03-16" class="text-gray-500 text-xs mb-2">Jan 16, 2023</time>
+    <span class="bg-gray-50 px-3 py-1.5 text-gray-600 text-xs mb-2">Salg og SoMe</span>
+    <h3 class="text-lg font-semibold text-gray-900 mb-2 text-center">LIVING TREND & LIVSSTIL</h3>
+    <Image src={living} alt="Living" class="w-full h-auto object-cover" />
+  </a>
+
+  <a href="https://www.instagram.com/kea_kismet_eksamen/" target="_blank" class="flex flex-col items-center w-full max-w-sm mx-auto transform transition-transform duration-300 hover:scale-105 cursor-pointer mb-8">
+    <time datetime="2020-03-10" class="text-gray-500 text-xs mb-2">Mar 10, 2025</time>
+    <span class="bg-gray-50 px-3 py-1.5 text-gray-600 text-xs mb-2">MMD</span>
+    <h3 class="text-lg font-semibold text-gray-900 mb-2 text-center">KISMET CAFE - REDESIGN</h3>
+    <Image src={kismet} alt="Kismet" class="w-full h-auto object-cover" />
+  </a>
+
+  <a href="https://www.instagram.com/muusmannforlag/" target="_blank" class="flex flex-col items-center w-full max-w-sm mx-auto transform transition-transform duration-300 hover:scale-105 cursor-pointer mb-8">
+    <time datetime="2020-02-12" class="text-gray-500 text-xs mb-2">Aug 12, 2025</time>
+    <span class="bg-gray-50 px-3 py-1.5 text-gray-600 text-xs mb-2">SoMe-ansvarlig</span>
+    <h3 class="text-lg font-semibold text-gray-900 mb-2 text-center">MUUSMANN FORLAG</h3>
+    <Image src={muusmann} alt="Muusmann" class="w-full h-auto object-cover" />
+  </a>
 </div>
-<div class="bg-white py-24 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto max-w-2xl lg:mx-0">
-      <h2 class="text-4xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-5xl ">ARBEJDE</h2>
-    </div>
-    <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-  <!-- Boks 1 -->
-  <article class="flex max-w-xl flex-col items-start justify-between">
-    <div class="flex items-center gap-x-4 text-xs">
-      <time datetime="2020-03-16" class="text-gray-500">Jan 16, 2023</time>
-      <span class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600">Salg og SoMe</span>
-    </div>
-    <div class="group relative grow">
-      <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-        LIVING TREND & LIVSSTIL
-      </h3>
-      <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">
-        Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.
-      </p>
-    </div>
-    <div class="relative mt-8 flex items-center justify-self-end max-w-xs">
-  <Image src={living} alt="Living" class="w-auto h-110 object-contain" />
-</div>
+
+<!-- Grå streg mellem første og anden sektion -->
+<div class="border-t border-gray-200 my-12"></div>
+<!-- Anden billedsektion (ikke klikbare) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-12 pb-20">
+  <article class="flex flex-col items-center w-full max-w-sm mx-auto mb-8">
+    <time datetime="2020-03-16" class="text-gray-500 text-xs mb-2">Canon AF35ML</time>
+    <span class="bg-gray-50 px-3 py-1.5 text-gray-600 text-xs mb-2">Film 2302/3302</span>
+    <Image src={foto1} alt="Foto1" class="w-full h-auto object-cover" />
   </article>
 
-  <!-- Boks 2 -->
-  <article class="flex max-w-xl flex-col items-start justify-between">
-    <div class="flex items-center gap-x-4 text-xs">
-      <time datetime="2020-03-10" class="text-gray-500">Mar 10, 2025</time>
-      <span class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600">MMD</span>
-    </div>
-    <div class="group relative grow">
-      <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-        KISMET CAFE - REDESIGN - EKSAMEN
-      </h3>
-      <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">
-        Optio cum necessitatibus dolor voluptatum provident commodi et. Qui aperiam fugiat nemo cumque.
-      </p>
-    </div>
-     <div class="relative mt-8 flex items-center justify-self-end max-w-xs">
-  <Image src={kismet} alt="Muusmann" class="w-auto h-110 object-contain" />
+  <article class="flex flex-col items-center w-full max-w-sm mx-auto mb-8">
+    <time datetime="2020-03-10" class="text-gray-500 text-xs mb-2">Canon AF35ML</time>
+    <span class="bg-gray-50 px-3 py-1.5 text-gray-600 text-xs mb-2">Film 2302/3302</span>
+    <Image src={foto2} alt="Foto2" class="w-full h-auto object-cover" />
   </article>
 
-  <!-- Boks 3 -->
-  <article class="flex max-w-xl flex-col items-start justify-between">
-    <div class="flex items-center gap-x-4 text-xs">
-      <time datetime="2020-02-12" class="text-gray-500">Aug 12, 2025</time>
-      <span class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600">SoMe-ansvarlig</span>
-    </div>
-    <div class="group relative grow">
-      <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
-        MUUSMANN FORLAG
-      </h3>
-      <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">
-        Cupiditate maiores ullam eveniet adipisci in doloribus nulla minus. Voluptas iusto libero adipisci rem et corporis. Nostrud sint anim sunt aliqua. Nulla eu labore irure incididunt velit cillum quis magna dolore.
-      </p>
-    </div>
-  <div class="relative mt-8 flex items-center justify-self-end max-w-xs">
-  <Image src={muusmann} alt="Muusmann" class="w-auto h-110 object-contain" />
-</div>
+  <article class="flex flex-col items-center w-full max-w-sm mx-auto mb-8">
+    <time datetime="2020-02-12" class="text-gray-500 text-xs mb-2">Canon AF35ML</time>
+    <span class="bg-gray-50 px-3 py-1.5 text-gray-600 text-xs mb-2">Film 2302/3302</span>
+    <Image src={foto4} alt="Foto4" class="w-full h-auto object-cover" />
   </article>
 </div>
-
-    </div>
-  </div>
-</div>
-
+</MainLayout>
   <footer>
     <Footer />
   </footer>
-</MainLayout>

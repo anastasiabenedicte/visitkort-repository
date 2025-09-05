@@ -2,18 +2,18 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from 'astro:assets';
 import brev from "../assets/images/brev.png";
-import laas from "../assets/images/laas.png";
+import laas from '../assets/images/laas.png';
 ---
 
 <MainLayout title="Titel">
-  <article class="bg-black min-h-screen flex flex-col items-center justify-center">
+  <article class="bg-black min-h-screen flex flex-col items-center justify-center font-cormorant-700 text-white">
     <div class="relative">
       <!-- Brev -->
-   <Image 
-  src={brev} 
-  alt="brev" 
-  class="w-[300px] transform sm:scale-100 md:scale-125 lg:scale-150"
-/>
+      <Image 
+        src={brev} 
+        alt="brev" 
+        class="w-[300px] sm:w-[400px] md:w-[500px] lg:w-[600px] transform"
+      />
 
       <!-- Lås centreret på brevet med hop-animation og link til astro.brev -->
       <a href="/brev" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group">
@@ -25,41 +25,20 @@ import laas from "../assets/images/laas.png";
       </a>
     </div>
 
-    <!-- Navn og titel i grid, nu uden for brevet og lås -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-40 mb-20">
-      <h2 class="font-cormorant-100 italic text-xl">
-        Anastasia Benedicte
-      </h2>
-      <h2 class="font-cormorant-100 italic text-xl">
-      
-      </h2>
+    <!-- Navn og titel -->
+    <div class="mt-12 md:mt-10 text-center">
+  
+
+      <p class="mt-4 text-base sm:text-lg md:text-xl font-cormorant-300 text-gray-200">
+       Anastasia Benedicte / Design & Visuel formidling
+      </p>
     </div>
 
-
-    <!-- Kontakt-links i grid -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-15 mb100 text-center column-gap">
-      <a
-        href="mailto:anni0010@stud.ek.dk"
-        class="font-cormorant-500 italic text-m text-white hover:text-gray-400 transition"
-      >
-        Contact
-      </a>
-      <a
-        href="https://www.instagram.com/anastasiabenedicte/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="font-cormorant-500 italic text-m text-white hover:text-gray-400 transition"
-      >
-        Instagram
-      </a>
-      <a
-        href="https://www.linkedin.com/in/anastasianielsen/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="font-cormorant-500 italic text-m text-white hover:text-gray-400 transition"
-      >
-        LinkedIn
-      </a>
+    <!-- Kontakt-links -->
+    <div class="mt-8 flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center text-center text-sm sm:text-base font-cormorant-300">
+      <a href="mailto:anni0010@stud.ek.dk" class="hover:text-gray-400 transition">Kontakt</a>
+      <a href="https://www.instagram.com/anastasiabenedicte/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-400 transition">Instagram</a>
+      <a href="https://www.linkedin.com/in/anastasianielsen/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-400 transition">LinkedIn</a>
     </div>
   </article>
 
@@ -73,7 +52,7 @@ import laas from "../assets/images/laas.png";
     }
     .group:hover .animate-hop {
       animation: none;
-      /* Fjern scale, så størrelsen ikke ændres ved hover */
     }
   </style>
 </MainLayout>
+

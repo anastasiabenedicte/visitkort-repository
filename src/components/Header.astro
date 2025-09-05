@@ -4,11 +4,12 @@ import laas from '../assets/images/laas.png';
 import papirBg from '../assets/images/papir.png';
 ---
 
-<header
-  class="w-full p-4 md:p-6 flex items-center bg-repeat bg-center"
-  style={`background-image: url('${papirBg.src}'); image-rendering: auto;`}
->
-  <a href="/">
+<header class="relative w-full p-4 md:p-6 flex items-center bg-repeat bg-center" style={`background-image: url('${papirBg.src}'); image-rendering: auto;`}>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-white/30 pointer-events-none"></div>
+  
+  <!-- Logo -->
+  <a href="/" class="relative z-10">
     <Image 
       src={laas} 
       alt="brev" 
