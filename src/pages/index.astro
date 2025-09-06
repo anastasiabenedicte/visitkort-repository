@@ -3,19 +3,22 @@ import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from 'astro:assets';
 import brev from "../assets/images/brev.png";
 import laas from '../assets/images/laas.png';
+import billede from '../assets/images/billede.png';
+import kamera from '../assets/images/kamera.png';
 ---
 
 <MainLayout title="Titel">
+
   <article class="bg-black min-h-screen flex flex-col items-center justify-center font-cormorant-700 text-white">
+
+    <!-- Brev med lås -->
     <div class="relative">
-      <!-- Brev -->
       <Image 
         src={brev} 
         alt="brev" 
         class="w-[300px] sm:w-[400px] md:w-[500px] lg:w-[600px] transform"
       />
 
-      <!-- Lås centreret på brevet med hop-animation og link til astro.brev -->
       <a href="/brev" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 group">
         <Image 
           src={laas} 
@@ -27,10 +30,8 @@ import laas from '../assets/images/laas.png';
 
     <!-- Navn og titel -->
     <div class="mt-12 md:mt-10 text-center">
-  
-
       <p class="mt-4 text-base sm:text-lg md:text-xl font-cormorant-300 text-gray-200">
-       Anastasia Benedicte / Design & Visuel formidling
+        Anastasia Benedicte / Design & Visuel formidling
       </p>
     </div>
 
@@ -40,6 +41,7 @@ import laas from '../assets/images/laas.png';
       <a href="https://www.instagram.com/anastasiabenedicte/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-400 transition">Instagram</a>
       <a href="https://www.linkedin.com/in/anastasianielsen/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-400 transition">LinkedIn</a>
     </div>
+
   </article>
 
   <style>
@@ -54,5 +56,5 @@ import laas from '../assets/images/laas.png';
       animation: none;
     }
   </style>
-</MainLayout>
 
+</MainLayout>

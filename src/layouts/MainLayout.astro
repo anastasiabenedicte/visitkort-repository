@@ -2,20 +2,20 @@
 import '../styles/tailwind.css';
 const { title } = Astro.props;
 ---
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-	</head>
-	<body>
-
-		<main>
-			<slot />
-		</main>
-
-
-			
-	</body>
+<html lang="da">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-paper min-h-screen bg-repeat bg-center text-gray-900 font-sans relative">
+    <!-- Overlay for hele siden -->
+    <div class="absolute inset-0 bg-white/30 pointer-events-none z-0"></div>
+    <main class="relative z-10">
+      <slot />
+    </main>
+  </body>
 </html>
+

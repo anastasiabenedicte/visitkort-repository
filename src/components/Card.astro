@@ -1,0 +1,26 @@
+---
+const { title, subtitle, date, description, imgSrc, href = null } = Astro.props;
+---
+
+{href ? (
+  <a href={href} target="_blank" class="group flex flex-col items-center w-full max-w-sm mx-auto transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+    <img src={imgSrc} alt={title} class="h-64 w-full object-cover mb-4" />
+    <div class="text-center">
+      <time datetime={date} class="text-gray-500 text-xs mb-1 block">{date}</time>
+      <span class="bg-gray-50 px-3 py-1.5 text-gray-600 text-xs mb-1 inline-block">{subtitle}</span>
+      <h3 class="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+      {description && <p class="text-sm text-gray-600">{description}</p>}
+    </div>
+  </a>
+) : (
+  <div class="flex flex-col items-center w-full max-w-sm mx-auto">
+    <img src={imgSrc} alt={title} class="h-64 w-full object-cover mb-4" />
+    <div class="text-center">
+      <time datetime={date} class="text-gray-500 text-xs mb-1 block">{date}</time>
+      <span class="bg-gray-50 px-3 py-1.5 text-gray-600 text-xs mb-1 inline-block">{subtitle}</span>
+      <h3 class="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+      {description && <p class="text-sm text-gray-600">{description}</p>}
+    </div>
+  </div>
+)}
+

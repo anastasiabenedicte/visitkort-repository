@@ -2,128 +2,112 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
-import papirBg from '../assets/images/papir.png';
-import portræt from '../assets/images/portræt.png';
+
+import PortfolioCard from '../components/PortfolioCard.astro';
+import PhotoCard from '../components/PhotoCard.astro';
+
 import brev from '../assets/images/brev.png';
-import blomst from '../assets/images/blomst.png';
+import portræt1 from '../assets/images/portræt1.png';
+import portræt2 from '../assets/images/portræt2.png';
+import portræt3 from '../assets/images/portræt3.png';
+import portræt4 from '../assets/images/portræt4.png';
 import billede from '../assets/images/billede.png';
 import kamera from '../assets/images/kamera.png';
-import muusmann from '../assets/images/muusmann.png';
 import living from '../assets/images/living.png';
 import kismet from '../assets/images/kismet.png';
+import muusmann from '../assets/images/muusmann.png';
 import foto1 from '../assets/images/foto1.png';
 import foto2 from '../assets/images/foto2.png';
 import foto4 from '../assets/images/foto4.png';
 ---
 
 <MainLayout title="Anastasia Benedicte | Design & Visuel Identitet">
-  <header class="relative z-20">
-    <Header />
-  </header>
+
+  <Header />
 
   <!-- HERO SECTION -->
-<section class="relative flex flex-col items-center justify-center text-center px-6 py-16 sm:py-24 min-h-screen bg-repeat bg-center" 
-         style={`background-image: url('${papirBg.src}'); background-position: center; background-repeat: repeat;`}>
-  <!-- Overlay -->
-  <div class="absolute inset-0 bg-white/30 pointer-events-none"></div>
+  <section class="relative px-6 py-24 sm:py-32 min-h-[calc(100vh-80px)]">
+    <div class="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      
+      <!-- VENSTRE: tekst + billeder -->
+      <div class="mx-auto max-w-prose text-center md:text-center">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-snug">
+          ANASTASIA <br />BENEDICTE
+        </h1>
 
-  <div class="relative z-10 max-w-prose mx-auto font-[Tenor_Sans]">
-    <!-- Navn / Titel -->
-    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-snug">
-      ANASTASIA <br />BENEDICTE
-    </h1>
+        <p class="mt-4 text-base sm:text-lg md:text-xl text-gray-700">
+          Design & Visuel formidling
+        </p>
 
-    <!-- Subtitle -->
-    <p class="mt-4 text-base sm:text-lg md:text-xl text-gray-800">
-      Design & Visuel formidling
-    </p>
+        <p class="mt-8 text-gray-700 text-base sm:text-lg leading-relaxed">
+          I en organisk tilgang skaber jeg visuelle fortællinger, der engagerer og inspirerer. I et sammenspil mellem form og funktion er det min ambition at skabe designløsninger, der ikke blot er æstetiske men også meningsfulde og effektive.
+        </p>
 
-    <!-- Typewriter tekst -->
-    <p class="mt-8 text-gray-700 text-base sm:text-lg leading-relaxed animate-typewriter whitespace-normal sm:whitespace-nowrap border-r-2 border-gray-900">
-      I mit arbejde er jeg optaget af en organisk tankegang
+        <div class="mt-12 flex justify-center md:justify-start items-end gap-6">
+          <!-- Venstre billede med link -->
+          <Link href="#portfolio-first-section">
+            <div class="w-32 sm:w-40 md:w-48 h-auto rounded-md overflow-hidden transform transition-transform duration-300 hover:scale-105 -translate-y-6 cursor-pointer">
+              <Image src={billede} alt="Billede" class="w-full h-full object-cover" />
+            </div>
+          </Link>
 
-    <!-- Tre billeder under teksten -->
-    <div class="relative mt-12 flex justify-center items-end gap-6">
-      <!-- Venstre billede -->
-      <Image 
-        src={billede} 
-        alt="Venstre billede" 
-        class="w-32 sm:w-40 md:w-48 h-auto object-cover rounded-md transform transition-transform duration-300 hover:scale-105 -translate-y-6"
-      />
+          <Link href="/" class="z-10">
+            <Image src={brev} alt="Brev" class="w-36 sm:w-48 md:w-56 h-auto object-cover rounded-md transform transition-transform duration-300 hover:scale-105" />
+          </Link>
 
-      <!-- Centrum billede -->
-      <Image 
-        src={brev} 
-        alt="Centrum billede" 
-        class="w-36 sm:w-48 md:w-56 h-auto object-cover rounded-md transform transition-transform duration-300 hover:scale-105 z-10"
-      />
+          <Link href="#portfolio-photos">
+            <Image src={kamera} alt="Kamera" class="w-32 sm:w-40 md:w-48 h-auto object-cover rounded-md transform transition-transform duration-300 hover:scale-105 -translate-y-6" />
+          </Link>
+        </div>
+      </div>
 
-      <!-- Højre billede -->
-      <Image 
-        src={kamera} 
-        alt="Højre billede" 
-        class="w-32 sm:w-40 md:w-48 h-auto object-cover rounded-md transform transition-transform duration-300 hover:scale-105 -translate-y-6"
-      />
+      <!-- HØJRE: 2x2 portræt-grid -->
+      <div class="mx-auto w-full max-w-sm md:max-w-md">
+        <div class="grid grid-cols-2 border border-gray-300">
+          <div class="w-full aspect-square overflow-hidden border-r border-b border-gray-300 group">
+            <Image src={portræt1} alt="Portræt1" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:-translate-y-2" />
+          </div>
+          <div class="w-full aspect-square overflow-hidden border-b border-gray-300 group">
+            <Image src={portræt2} alt="Portræt2" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:translate-y-2" />
+          </div>
+          <div class="w-full aspect-square overflow-hidden border-r border-gray-300 group">
+            <Image src={portræt3} alt="Portræt3" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:-translate-x-2" />
+          </div>
+          <div class="w-full aspect-square overflow-hidden group">
+            <Image src={portræt4} alt="Portræt4" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:translate-x-2" />
+          </div>
+        </div>
+      </div>
+
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- Grå linje over portfolio -->
+  <div class="border-t border-gray-300 my-12"></div>
 
+  <!-- PORTFOLIO -->
+  <section class="relative mx-auto max-w-7xl px-6 lg:px-8 mt-12">
+    <div class="relative z-10">
+      <h2 class="text-4xl tracking-tight text-gray-900 text-center sm:text-5xl mb-12">PORTFOLIO</h2>
 
-<div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <!-- Første sektion -->
+      <div id="portfolio-first-section" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 pb-16">
+        <PortfolioCard href="https://www.instagram.com/livingtrendoglivsstil/" date="Jan 16, 2023" tag="Salg og SoMe" title="LIVING TREND & LIVSSTIL" imgSrc={living} />
+        <PortfolioCard href="https://www.instagram.com/kea_kismet_eksamen/" date="Mar 10, 2025" tag="MMD" title="KISMET CAFE - REDESIGN" imgSrc={kismet} />
+        <PortfolioCard href="https://www.instagram.com/muusmannforlag/" date="Aug 12, 2025" tag="SoMe-ansvarlig" title="MUUSMANN FORLAG" imgSrc={muusmann} />
+      </div>
 
-  <!-- Første grå streg før portfolio -->
-  <div class="border-t border-gray-200 pt-10"></div>
+      <!-- Anden sektion (billeder) -->
+      <div id="portfolio-photos" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-12 pb-20">
+        <PhotoCard date="Canon AF35ML" tag="Film 2302/3302" imgSrc={foto1} alt="Foto1" />
+        <PhotoCard date="Canon AF35ML" tag="Film 2302/3302" imgSrc={foto2} alt="Foto2" />
+        <PhotoCard date="Canon AF35ML" tag="Film 2302/3302" imgSrc={foto4} alt="Foto4" />
+      </div>
+    </div>
+  </section>
 
-  <h2 class="text-4xl tracking-tight text-gray-900 text-center sm:text-5xl mb-12">PORTFOLIO</h2>
-  <!-- Første billedsektion (klikbare med hover) -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 pb-16">
-  <a href="https://www.instagram.com/livingtrendoglivsstil/" target="_blank" class="flex flex-col items-center w-full max-w-sm mx-auto transform transition-transform duration-300 hover:scale-105 cursor-pointer mb-8">
-    <time datetime="2020-03-16" class="text-gray-500 text-xs mb-2">Jan 16, 2023</time>
-    <span class="bg-gray-50 px-3 py-1.5 text-gray-600 text-xs mb-2">Salg og SoMe</span>
-    <h3 class="text-lg font-semibold text-gray-900 mb-2 text-center">LIVING TREND & LIVSSTIL</h3>
-    <Image src={living} alt="Living" class="w-full h-auto object-cover" />
-  </a>
+  <Footer />
 
-  <a href="https://www.instagram.com/kea_kismet_eksamen/" target="_blank" class="flex flex-col items-center w-full max-w-sm mx-auto transform transition-transform duration-300 hover:scale-105 cursor-pointer mb-8">
-    <time datetime="2020-03-10" class="text-gray-500 text-xs mb-2">Mar 10, 2025</time>
-    <span class="bg-gray-50 px-3 py-1.5 text-gray-600 text-xs mb-2">MMD</span>
-    <h3 class="text-lg font-semibold text-gray-900 mb-2 text-center">KISMET CAFE - REDESIGN</h3>
-    <Image src={kismet} alt="Kismet" class="w-full h-auto object-cover" />
-  </a>
-
-  <a href="https://www.instagram.com/muusmannforlag/" target="_blank" class="flex flex-col items-center w-full max-w-sm mx-auto transform transition-transform duration-300 hover:scale-105 cursor-pointer mb-8">
-    <time datetime="2020-02-12" class="text-gray-500 text-xs mb-2">Aug 12, 2025</time>
-    <span class="bg-gray-50 px-3 py-1.5 text-gray-600 text-xs mb-2">SoMe-ansvarlig</span>
-    <h3 class="text-lg font-semibold text-gray-900 mb-2 text-center">MUUSMANN FORLAG</h3>
-    <Image src={muusmann} alt="Muusmann" class="w-full h-auto object-cover" />
-  </a>
-</div>
-
-<!-- Grå streg mellem første og anden sektion -->
-<div class="border-t border-gray-200 my-12"></div>
-<!-- Anden billedsektion (ikke klikbare) -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-12 pb-20">
-  <article class="flex flex-col items-center w-full max-w-sm mx-auto mb-8">
-    <time datetime="2020-03-16" class="text-gray-500 text-xs mb-2">Canon AF35ML</time>
-    <span class="bg-gray-50 px-3 py-1.5 text-gray-600 text-xs mb-2">Film 2302/3302</span>
-    <Image src={foto1} alt="Foto1" class="w-full h-auto object-cover" />
-  </article>
-
-  <article class="flex flex-col items-center w-full max-w-sm mx-auto mb-8">
-    <time datetime="2020-03-10" class="text-gray-500 text-xs mb-2">Canon AF35ML</time>
-    <span class="bg-gray-50 px-3 py-1.5 text-gray-600 text-xs mb-2">Film 2302/3302</span>
-    <Image src={foto2} alt="Foto2" class="w-full h-auto object-cover" />
-  </article>
-
-  <article class="flex flex-col items-center w-full max-w-sm mx-auto mb-8">
-    <time datetime="2020-02-12" class="text-gray-500 text-xs mb-2">Canon AF35ML</time>
-    <span class="bg-gray-50 px-3 py-1.5 text-gray-600 text-xs mb-2">Film 2302/3302</span>
-    <Image src={foto4} alt="Foto4" class="w-full h-auto object-cover" />
-  </article>
-</div>
 </MainLayout>
-  <footer>
-    <Footer />
-  </footer>

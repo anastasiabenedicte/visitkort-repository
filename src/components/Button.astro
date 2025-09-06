@@ -1,5 +1,6 @@
 ---
+const { type = "button" } = Astro.props;
 ---
-<div>
-    <button class="border-2 border-black"><slot /></button>
-</div>
+<button type={type} class="border-2 border-black px-4 py-2 rounded-md transition-transform duration-300 hover:scale-105 hover:bg-black/5">
+  <slot />
+</button>

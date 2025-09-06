@@ -1,0 +1,10 @@
+---
+const { date, tag, imgSrc, alt } = Astro.props;
+import { Image } from 'astro:assets';
+---
+
+<article class="flex flex-col items-center w-full max-w-sm mx-auto mb-8">
+  <time class="portfolio-time">{date}</time>
+  <span class="portfolio-tag">{tag}</span>
+  <Image src={imgSrc} alt={alt} class="w-full h-auto object-cover" />
+</article>
